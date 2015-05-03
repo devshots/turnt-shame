@@ -1,7 +1,7 @@
 
 // Use Parse.Cloud.define to define as many cloud functions as you want.
 // For example:
-Parse.Cloud.define("mail", function(request, response) {
+Parse.Cloud.define("sendemail", function(request, response) {
   // response.success("Hello world!");
   var Mandrill = require('mandrill');
   Mandrill.initialize('R3fRLJrc9DjbUISVk0Idwg');
