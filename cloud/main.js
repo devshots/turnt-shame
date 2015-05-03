@@ -8,7 +8,7 @@ Parse.Cloud.define("mail", function(request, response) {
   
   Mandrill.sendEmail({
     message: {
-      text: "Your code is ",
+      text: "Your code is <code>\n Please keep this code for the discount",
       subject: "Congratulations! Here is your discount code",
       from_email: "viaeducation@via-e.com",
       from_name: "Via Education",
