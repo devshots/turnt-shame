@@ -5,17 +5,20 @@ Parse.Cloud.define("mail", function(request, response) {
   // response.success("Hello world!");
   var Mandrill = require('mandrill');
   Mandrill.initialize('R3fRLJrc9DjbUISVk0Idwg');
-  
+ 
+  var code = request.params.discountCode;
+  var email = request.params.emailAddress;
+
   Mandrill.sendEmail({
     message: {
-      text: "Your code is <code>\n Please keep this code for the discount",
+      text: "Your code is " + code + "\n Please keep this code for the discount ",
       subject: "Congratulations! Here is your discount code",
       from_email: "viaeducation@via-e.com",
       from_name: "Via Education",
       to: [
         {
-          email: "ethan@devshots.io",
-          name: "Ethan Bruning"
+          email: email,
+          name: email
         }
       ]
     },
