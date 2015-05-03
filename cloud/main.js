@@ -8,10 +8,10 @@ Parse.Cloud.define("mail", function(request, response) {
   
   Mandrill.sendEmail({
     message: {
-      text: "Hello World!",
-      subject: "Using Cloud Code and Mandrill is great!",
-      from_email: "parse@cloudcode.com",
-      from_name: "Cloud Code",
+      text: "Your code is ",
+      subject: "Congratulations! Here is your discount code",
+      from_email: "viaeducation@via-e.com",
+      from_name: "Via Education",
       to: [
         {
           email: "ethan@devshots.io",
