@@ -4,7 +4,7 @@
 Parse.Cloud.define("sendemail", function(request, response) {
   // response.success("Hello world!");
   var Mandrill = require('mandrill');
-  Mandrill.initialize('R3fRLJrc9DjbUISVk0Idwg');
+  Mandrill.initialize('BusNpHc2RGc5yYAsSrkIqA');
 
   var code = request.params.discountCode;
   var email = request.params.emailAddress;
